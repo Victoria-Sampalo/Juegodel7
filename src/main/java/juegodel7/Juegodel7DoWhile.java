@@ -23,14 +23,13 @@ public class Juegodel7DoWhile {
         int contadorJ2 = 0;
         int ronda=1; 
         
+        //-------INTRODUCCIÓN AL JUEGO------------------
+            System.out.println("ESTE ES EL JUEGO DEL 7.\nComenzamos por la ronda" + ronda + "  .Adelante...");
         //------COMIENZA DESARROLLO------------------------
         //--------MÉTODO DO-WHILE-------------------------- 
        
         do{
-         
-           //-------INTRODUCCIÓN AL JUEGO------------------
-            System.out.println("ESTE ES EL JUEGO DEL 7.\nComenzamos por la ronda" + ronda + "  .Adelante...");
-           
+     
           //--------IMPRIMO LOS VALORES ALEATORIOS PARA AMBOS JUGADORES-----------
         
         //JUGADOR 1-----------------------------------------------
@@ -70,7 +69,8 @@ public class Juegodel7DoWhile {
         }while (ronda <= 5);
         
         //Imprimo resultado de ambos contadores
-       
+        System.out.println("El ganador de las 5 rondas es\n"
+                + "-------------------------------------\n");
          if (contadorJ1 > contadorJ2 || contadorJ1 ==3){
              System.out.println("GANA JUGADOR 1");
          } else {
