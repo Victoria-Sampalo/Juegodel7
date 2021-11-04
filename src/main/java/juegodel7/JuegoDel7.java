@@ -19,16 +19,18 @@ public class JuegoDel7 {
         //------VARIABLES A USAR--------------------
         int numJ1, numJ2, sumaTotal;
         
-        int contadorGlobal, contadorJ1, contadorJ2; 
+        
+       
+        int contadorJ1= 0; 
+        int contadorJ2 = 0;
+        
         
         //------COMIENZA DESARROLLO-------------------------
         
         //Bucle con las 5 rondas a imprimir 
-        for (int i = 0; i < 5; i++) {
+        for (int ronda = 0; ronda < 5; ronda++) {
             
         
-        //CONTADOR DE PUNTOS PUNTO 1 
-        //CONTADOR PUNTO ++
         
         //--------IMPRIMO LOS VALORES ALEATORIOS PARA AMBOS JUGADORES-----------
         
@@ -49,17 +51,41 @@ public class JuegoDel7 {
         
         //---------------CONDICIONES----------------------
         if (sumaTotal < 7) {
-            System.out.println("gana J1");
-        } else {
-            System.out.println("gana J2");
+            System.out.println("Esta ronda la gana --> J1");
+            contadorJ1++;
+            //no hace falta poner contador global porque no hace falta
+        } else if (sumaTotal >7){
+            System.out.println("Esta ronda la gana --> J2");
+            contadorJ2++;
         }
-        if (sumaTotal == 7) {
+        else {
             
-            System.out.println("no gana ninguna");
-            i--; //hace que la ronda no cuente 
+            System.out.println("ESTA RONDA NO LA GANA NADIE");
+            ronda--; //hace que la ronda no cuente 
         }
-        
+         
+          //las rondas siguen sumando 1
+            ronda++;
+            if(contadorJ1 ==3){
+               System.out.println("GANA JUGADOR 1");
+               break; 
+            } else if (contadorJ2 == 3) {
+               System.out.println("GANA JUGADOR 2");
+               break; 
+            }
+            
       } //end for1
+      /*  
+       //Imprimo resultado de ambos contadores
+        System.out.println("El ganador de las 5 RONDAS es\n"
+                + "-------------------------------------\n");
+         if (contadorJ1 > contadorJ2 || contadorJ1 ==3){
+             System.out.println("GANA JUGADOR 1");
+         } else {
+             System.out.println("GANA JUGADOR 2");
+         }
+         */
+       
     }
 
 }
